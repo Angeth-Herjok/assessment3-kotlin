@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     println(currentAccount.balance--)
     currentAccount.details()
     var savingsAccount=SavingsAccount(16247857,"Becky",15893.56)
-    println(savingsAccount.withdrawal(5874))
+
 }
 //1. Write and invoke one function that takes in a random string and returns the
 //following values: first character, last character, length of the string and
@@ -120,6 +120,6 @@ class SavingsAccount(var accountNumber: Int,accountNam: String,balances: Double)
             println("not allow")
         }
     }
-}
+
 
 
