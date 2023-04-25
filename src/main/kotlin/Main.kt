@@ -2,10 +2,12 @@ fun main(args: Array<String>) {
     people("mathew")
     multiple()
     validPassword("angethherjok@gmail.com")
-    var currentAccount=CurrentAccount(16247857,"Becky",5893.56)
+    var currentAccount=CurrentAccount(16247857,"Becky",15893.56)
     println(currentAccount.balance++)
     println(currentAccount.balance--)
     currentAccount.details()
+    var savingsAccount=SavingsAccount(16247857,"Becky",15893.56)
+    println(savingsAccount.withdrawal(5874))
 }
 //1. Write and invoke one function that takes in a random string and returns the
 //following values: first character, last character, length of the string and
@@ -31,6 +33,7 @@ fun people(student:String){
 //4. Must contain a digit
 //Your function should determine whether the password provided is valid or not.
 //The function returns true/false (7pts)
+
 fun validPassword(password:String){
     if (password=="8 characters"){
         println("True")
@@ -73,12 +76,14 @@ fun multiple(){
 class CurrentAccount(var accountNumber:Int,var accountName:String,var balance:Double){
     fun deposit(amount:Double){
        var amountDeposit=5900.809
-        balance++
+        balance=amountDeposit++
+
+
 
     }
     fun withdraw(amount: Double){
         var withdawaAmountl=6863.68
-        balance--
+        balance=withdawaAmountl--
 
     }
     fun details(){
@@ -99,6 +104,9 @@ class SavingsAccount(var accountNumber: Int,accountName: String,balance: Double)
     fun withdrawal(withdrawals:Int){
         if (withdrawals<=4){
             println("Allow one to withdraw")
+        }
+        else{
+            println("not allow")
         }
     }
 }
