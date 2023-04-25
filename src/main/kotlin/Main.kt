@@ -100,7 +100,18 @@ class CurrentAccount(var accountNumber:Int,var accountName:String,var balance:Do
 //from the account. It also increments the withdrawals attribute after a
 //successful withdrawal (6pts)
 //
-class SavingsAccount(var accountNumber: Int,accountName: String,balance: Double){
+class SavingsAccount(var accountNumber: Int,accountNam: String,balances: Double){
+    fun deposit(amount:Double){
+        var amout=7897.89
+    }
+    fun withdraw(amount: Double){
+        var withdaamount=6975.98
+
+    }
+    fun details(){
+
+    }
+}
     fun withdrawal(withdrawals:Int){
         if (withdrawals<=4){
             println("Allow one to withdraw")
